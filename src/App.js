@@ -1,15 +1,16 @@
-import ButtonComponent from "./components /button/button-component"
 import ListComponent from "./components /list /list"
 import OrderedList from "./components /list /orderedList/ordered-list"
 import Heading,{HeadingComponent2 as SaiGanesh,HeadingComponent3 as Koushik } from "./components /heading/headings"
 import { Greeting } from "./components /greeting/greeting"
 import { TodoList } from "./components /todo/todo-list"
+import ButtonComponent from "./components /classBased/button-component"
 
 function App (){
   return(
 <div>
-  <Greeting></Greeting>
-  <TodoList/>
+
+  <ButtonComponent/>
+
 
 
 </div>
@@ -84,3 +85,66 @@ export default App
 // Rules of jsx 
 
 // 1. Every component must return single parent 
+
+
+
+
+
+
+
+
+// 2011
+// React : 2013 
+
+
+
+// 2 componnents 
+// 1. functional components ---> only static or presentational layer 
+// 2. class based components  ---> used for creating a functional layer
+
+
+// 2018  react 16.8 version ----> hooks 
+
+
+// 1. functional components ---> used for creating a functional layer  ---> data layer 
+// 2. class based components  ---> used for creating a functional layer
+
+
+// react data layer 
+
+// 1. state and props 
+
+
+
+// state : it is an object which holds the component data or infomation in a private manner 
+
+// class based components
+
+
+// creating a state in a class based components
+// 1. Object way of creation
+// 2. Constructor way 
+
+
+// to change the state or data in  in class based component
+// setState 
+// setState --> it will accept 2 args 
+// 1arg ---> object ---> we will change the state here 
+// 2arg ---> callback function ----> we can check the state change 
+
+
+
+// Team team suggesting only to use functional 
+// cla
+
+
+
+
+
+
+
+
+
+
+
+

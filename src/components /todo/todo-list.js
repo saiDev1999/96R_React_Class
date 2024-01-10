@@ -22,7 +22,7 @@ const {name:sai,imageURL,imageALT:alternateText,listItems}=details
       className="photo"
     />
     <ul>
-      <li>{listItems[0]}</li>
+      <li style={{color: !true? "red":"black"}} >{listItems[0]}</li>
       <li>{listItems[1]}</li>
       <li>{listItems[2]}</li>
     </ul>
@@ -34,3 +34,15 @@ const {name:sai,imageURL,imageALT:alternateText,listItems}=details
 
 // class is the predefined keyword in class based component in react so 
 // className instead of class
+
+
+
+
+// tasks :
+
+
+// 1. Repeat the class 
+// 2. Take a container , click to alter the color (dark and light)
+// 3. Notes on conditional rendering (conditional opearator and short circuit opearator)
+// 4. image alter images 
+

@@ -2,10 +2,13 @@
 
 
 function ButtonComponent (){
+    const obj={
+        text:"Logib"
+    }
 
     return(
 
-        <button>Login</button>
+        <button>{obj.text}</button>
 
     )
 }
