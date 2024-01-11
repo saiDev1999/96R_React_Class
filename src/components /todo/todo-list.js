@@ -46,3 +46,79 @@ const {name:sai,imageURL,imageALT:alternateText,listItems}=details
 // 3. Notes on conditional rendering (conditional opearator and short circuit opearator)
 // 4. image alter images 
 
+
+
+
+
+
+
+// login feature 
+
+
+// internet down , backend mistakes, sever load increase 
+
+// 1. positive case --> right details , proper internet , access the content 
+// 2. Negative case -----> right details , internet down --- api will gets failed ---> infinite loading, screen error 
+
+// exceptional handling 
+
+
+// exception handling is a process or method used for handling the abnormal statements in the code 
+// and executing them. 
+// .It also enables to handle the flow control of the code/program
+//  For handling the code, various handlers are used that process the exception and execute the code.
+//   For example, the Division of a non-zero value with zero will result into infinity always, and it is an exception.
+//    Thus, with the help of exception handling, it can be executed and handled.
+
+
+
+//    8/0 -----> infinity ----> web sites will get froze 
+
+// types of errors 
+
+// 1. syntax errors
+// 2. run times errors 
+// 3. client side errors 
+
+
+// 1. Try / catch blocks 
+// 2. Try /catch /finally blocks 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

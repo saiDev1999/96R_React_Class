@@ -4,12 +4,18 @@ import Heading,{HeadingComponent2 as SaiGanesh,HeadingComponent3 as Koushik } fr
 import { Greeting } from "./components /greeting/greeting"
 import { TodoList } from "./components /todo/todo-list"
 import ButtonComponent from "./components /classBased/button-component"
+import ApiCall from "./components /exceptionalHandling/api-call"
+import InlineStyles from "./components /styling/inline-styles"
+import ExternalStyles from "./components /styling/external-styling"
+import ModuleStlyles from "./components /styling/module-styles"
 
 function App (){
   return(
 <div>
 
-  <ButtonComponent/>
+  <ModuleStlyles/>
+
+{/* <ExternalStyles/> */}
 
 
 
@@ -136,6 +142,24 @@ export default App
 
 // Team team suggesting only to use functional 
 // cla
+
+
+
+
+// Virtaul dom 
+//  1. Diffing -----> compare the previous state and current (something changed)
+//  2. Reconcilation ----> it will update the particular ---> only at the button without disturbing other parts of ui 
+
+
+
+// how to apply styles to react application
+
+// 1.Inline styling 
+// 2. External css styling
+// 3. External module css styling  
+// 4. Styled components or sass type of styling (boostrap,tailwind css, material ui,ant design )
+
+
 
 
 
