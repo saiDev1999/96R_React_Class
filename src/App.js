@@ -8,14 +8,15 @@ import ApiCall from "./components /exceptionalHandling/api-call"
 import InlineStyles from "./components /styling/inline-styles"
 import ExternalStyles from "./components /styling/external-styling"
 import ModuleStlyles from "./components /styling/module-styles"
+import BootstrapLayout from "./components /bootsrap /first-component"
+import MapMethod from "./components /bootsrap /mapMethod"
 
 function App (){
   return(
 <div>
 
-  <ModuleStlyles/>
-
-{/* <ExternalStyles/> */}
+{/* <BootstrapLayout/> */}
+<MapMethod/>
 
 
 
@@ -163,7 +164,14 @@ export default App
 
 
 
+// 2 ways external styled componenyts  boostrap
 
+// 1. CDN 
+// 2. NPM (node package manager)
+
+// bootsratp installation :
+// 1. Using npm install react bootstrap and bootstarp 
+// 2.import the css style sheet to apply the boostrap styles (app.js or index.js)
 
 
 
