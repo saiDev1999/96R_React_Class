@@ -10,13 +10,15 @@ import ExternalStyles from "./components /styling/external-styling"
 import ModuleStlyles from "./components /styling/module-styles"
 import BootstrapLayout from "./components /bootsrap /first-component"
 import MapMethod from "./components /bootsrap /mapMethod"
+import ParentComponent from "./components /props/parent"
 
 function App (){
   return(
 <div>
 
 {/* <BootstrapLayout/> */}
-<MapMethod/>
+{/* <MapMethod/> */}
+<ParentComponent/>
 
 
 

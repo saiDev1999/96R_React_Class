@@ -1,4 +1,4 @@
-import ProfileCard from "./card"
+import ProfileCard, { ProfileCard1 } from "./card"
 const BootstrapLayout =()=>{
 
     const members=[
@@ -34,16 +34,18 @@ const BootstrapLayout =()=>{
 <div className="container mt-5">
   <div className="row">
     <div className="col-sm-4">
-        <ProfileCard  profile={members[0]} />
+        {/* <ProfileCard  profile={members[0]} /> */}
+
+        <ProfileCard1 profile={members[0]} />
         
      
     </div>
     <div className="col-sm-4">
-        <ProfileCard profile={members[1]}  />
+        {/* <ProfileCard profile={members[1]}  /> */}
      
     </div>
     <div className="col-sm-4">
-    <ProfileCard profile={members[2]}  />
+    {/* <ProfileCard profile={members[2]}  /> */}
     
     </div>
   </div>
@@ -62,3 +64,7 @@ export default BootstrapLayout
 //  props are immutable (we cannot change the data)
 
 //  attribute : additional information given to element (attribute are fixed)
+
+// props 2 ways
+// 1. General prop
+// 2.Children prop
