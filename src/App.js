@@ -11,6 +11,7 @@ import ModuleStlyles from "./components /styling/module-styles"
 import BootstrapLayout from "./components /bootsrap /first-component"
 import MapMethod from "./components /bootsrap /mapMethod"
 import ParentComponent from "./components /props/parent"
+import Counter from "./components /counter /counter"
 
 function App (){
   return(
@@ -18,7 +19,8 @@ function App (){
 
 {/* <BootstrapLayout/> */}
 {/* <MapMethod/> */}
-<ParentComponent/>
+{/* <ParentComponent/> */}
+<Counter/>
 
 
 

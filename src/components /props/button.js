@@ -2,7 +2,7 @@
 
 
 
-function Button ({children,width}){
+function Button ({children,width,height}){
     const obj={
         text:"Login"
     }
