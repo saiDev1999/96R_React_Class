@@ -12,14 +12,13 @@ import BootstrapLayout from "./components /bootsrap /first-component"
 import MapMethod from "./components /bootsrap /mapMethod"
 import ParentComponent from "./components /props/parent"
 import Counter from "./components /counter /counter"
+import Mouting from "./components /lifecycle /mounting /mounting"
 
 function App (){
+  const greenColor="green"
   return(
 <div>
-
-{/* <BootstrapLayout/> */}
-{/* <MapMethod/> */}
-{/* <ParentComponent/> */}
+{/* <Mouting color={greenColor} /> */}
 <Counter/>
 
 
@@ -38,6 +37,12 @@ export default App
 // 4. Basic commands prepare a docs 
 
 
+
+
+
+// tasks :
+// 1. Repeat the class 
+// 2. Apply styling and show cards (row 3 or 4 cards) with add to cart button 
 
 
 
@@ -176,6 +181,63 @@ export default App
 // bootsratp installation :
 // 1. Using npm install react bootstrap and bootstarp 
 // 2.import the css style sheet to apply the boostrap styles (app.js or index.js)
+
+
+
+
+// human life cycle :
+
+// 1. born stage 
+// 2. survival stage 
+// 3. expiry stage 
+
+// main character : human 
+// place : earth 
+
+
+
+// Life cycle of a component 
+
+// 1. Creation of component (mounting phase)
+
+// 2. updating stage (updating phase)
+// 3. expiry strage (unmounting phase)
+
+// main character : component 
+// place : dom 
+
+
+
+
+// Mounting phase : creation of elements and inserting in the dom we can call as mounting phase 
+
+
+// 4 methods :
+
+
+// 1. Constructor method
+// 2. Render method 
+// 3. getDerivedStateFromProps
+// 4. Component did mount 
+
+
+
+// Updating phase :
+// 5 methods
+
+// 1. render 
+// 2. getDerivedStateFromProps // rarely 
+// 3. component did update  // side effects in update phase 
+// 4. getSnapShotBeforeUpdate 
+// 5. component should update  // it will decide component has to update or not 
+
+// Unmounting :
+
+// 1. Component will unmount // clean up purpose 
+
+
+
+
 
 
 
