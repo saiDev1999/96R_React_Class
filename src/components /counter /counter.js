@@ -14,6 +14,7 @@ class Counter extends Component{
     }
 
     handleIncrement=(data)=>{
+
         //setState
         this.setState(
             {

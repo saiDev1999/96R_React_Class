@@ -13,13 +13,17 @@ import MapMethod from "./components /bootsrap /mapMethod"
 import ParentComponent from "./components /props/parent"
 import Counter from "./components /counter /counter"
 import Mouting from "./components /lifecycle /mounting /mounting"
+import UpdatePhase from "./components /lifecycle /updating /updatingPhase"
+import Unmounting from "./components /lifecycle /unmounting /unMounting"
 
 function App (){
   const greenColor="green"
   return(
 <div>
 {/* <Mouting color={greenColor} /> */}
-<Counter/>
+{/* <Counter/> */}
+{/* <UpdatePhase favColor="green" /> */}
+<Unmounting/>
 
 
 
@@ -227,9 +231,9 @@ export default App
 
 // 1. render 
 // 2. getDerivedStateFromProps // rarely 
-// 3. component did update  // side effects in update phase 
 // 4. getSnapShotBeforeUpdate 
 // 5. component should update  // it will decide component has to update or not 
+// 3. component did update  // side effects in update phase 
 
 // Unmounting :
 
