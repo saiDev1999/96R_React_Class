@@ -15,6 +15,8 @@ import Counter from "./components /counter /counter"
 import Mouting from "./components /lifecycle /mounting /mounting"
 import UpdatePhase from "./components /lifecycle /updating /updatingPhase"
 import Unmounting from "./components /lifecycle /unmounting /unMounting"
+import UseStateExample from "./components /hooks/useState/useStateEx1"
+import UseStateExample2 from "./components /hooks/useState/useStateEx2"
 
 function App (){
   const greenColor="green"
@@ -23,7 +25,9 @@ function App (){
 {/* <Mouting color={greenColor} /> */}
 {/* <Counter/> */}
 {/* <UpdatePhase favColor="green" /> */}
-<Unmounting/>
+{/* <Unmounting/> */}
+{/* <UseStateExample/> */}
+<UseStateExample2/>
 
 
 
@@ -238,6 +242,65 @@ export default App
 // Unmounting :
 
 // 1. Component will unmount // clean up purpose 
+
+
+
+// class based components :
+
+// 1. always we should this keyword for data and method binding 
+// 2. State updating we need setState method 
+// 3. code splitted in to multiple methods to perform a task (dom tiltle updation)
+// 4. life cycles methods hard to understand 
+
+
+
+// presentational layer : static ui layer 
+
+// functional layer or container layer or data layer : dynamic data ui layer 
+
+
+// 2018 : 16.8 version react introduced hooks concept in functional based components 
+
+
+// hooks : functional based both presentational and container layer 
+
+
+// hooks : hooks let you use of state and other react features(life cycle methods ) without writing a class based 
+// components 
+
+// examples of hooks :
+
+// 1. useState : using useState we can create the state in functional based components 
+// 2. useEffect 
+// 3. useMemo 
+// 4. useCallback 
+// 5. useReducer 
+// 6. useContext
+// 7. custom hooks ()
+
+// * hooks will always start with use keyword 
+
+// * hooks :
+
+// 1. predefined hooks 
+// 2. custom hooks (user specific hoook based on the requirements) ex: useFetch 
+
+// rules of hooks 
+
+// 1. we must use only in functional based components 
+// 2. hooks must be call at the top of the components 
+// 3. hooks cannot be conditional 
+// 4. always import the hooks while using 
+
+// if(true){
+//   useState 
+// }
+
+
+
+
+
+
 
 
 

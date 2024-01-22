@@ -22,6 +22,7 @@ class Unmounting extends Component{
             count:this.state.count+1
         })
     }
+    
 
 
     render(){
