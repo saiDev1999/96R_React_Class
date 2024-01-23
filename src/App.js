@@ -17,6 +17,8 @@ import UpdatePhase from "./components /lifecycle /updating /updatingPhase"
 import Unmounting from "./components /lifecycle /unmounting /unMounting"
 import UseStateExample from "./components /hooks/useState/useStateEx1"
 import UseStateExample2 from "./components /hooks/useState/useStateEx2"
+import UseStateExample3 from "./components /hooks/useState/useStateEx3"
+import Uncontrolled from "./components /forms /uncontrolled"
 
 function App (){
   const greenColor="green"
@@ -27,7 +29,9 @@ function App (){
 {/* <UpdatePhase favColor="green" /> */}
 {/* <Unmounting/> */}
 {/* <UseStateExample/> */}
-<UseStateExample2/>
+{/* <UseStateExample2/> */}
+{/* <UseStateExample3/> */}
+<Uncontrolled/>
 
 
 
