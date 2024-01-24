@@ -19,6 +19,8 @@ import UseStateExample from "./components /hooks/useState/useStateEx1"
 import UseStateExample2 from "./components /hooks/useState/useStateEx2"
 import UseStateExample3 from "./components /hooks/useState/useStateEx3"
 import Uncontrolled from "./components /forms /uncontrolled"
+import Controlled from "./components /forms /controlled/controlled"
+import Circle from "./components /forms /circle"
 
 function App (){
   const greenColor="green"
@@ -31,7 +33,9 @@ function App (){
 {/* <UseStateExample/> */}
 {/* <UseStateExample2/> */}
 {/* <UseStateExample3/> */}
-<Uncontrolled/>
+{/* <Uncontrolled/> */}
+{/* <Controlled/> */}
+<Circle/>
 
 
 

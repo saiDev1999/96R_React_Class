@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 
 
 
@@ -7,6 +7,7 @@ const Uncontrolled =()=>{
 
     const emailRef=useRef()
     const passwordRef=useRef()
+    const[error,setError]=useState("")
 
 
 
@@ -45,7 +46,19 @@ const Uncontrolled =()=>{
   body: JSON.stringify(data)
 })
 .then(res => res.json())
-.then(res=>console.log(res))
+.then(res=>{
+  if(res.message){
+    alert(res.message)
+    setError(res.message)
+
+  }else{
+    alert("successfull login")
+    setError("")
+  }
+
+
+
+})
 .catch(err=>console.log(err))
     }
 
@@ -67,6 +80,12 @@ const Uncontrolled =()=>{
       <input className="form-check-input" type="checkbox" name="remember"/> Remember me
     </label> */}
   </div>
+  {
+    error ?
+    <h2 style={{color:"red"}} >{error}</h2>
+    :
+    null
+  }
   <button type="submit" className="btn btn-primary">Submit</button>
 </form>
 </>
