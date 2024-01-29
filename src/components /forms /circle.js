@@ -18,6 +18,20 @@ function Circle() {
         console.log(index)
         console.log(circles)
 
+        const newArry=circles.map((val,i)=>{
+            if(i===index && val){
+                return false
+
+            }else{
+                return true
+
+            }
+        })
+        setCircles(newArry)
+
+
+
+
     }
 
   return (

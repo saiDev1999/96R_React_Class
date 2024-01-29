@@ -1,41 +1,11 @@
-import ListComponent from "./components /list /list"
-import OrderedList from "./components /list /orderedList/ordered-list"
-import Heading,{HeadingComponent2 as SaiGanesh,HeadingComponent3 as Koushik } from "./components /heading/headings"
-import { Greeting } from "./components /greeting/greeting"
-import { TodoList } from "./components /todo/todo-list"
-import ButtonComponent from "./components /classBased/button-component"
-import ApiCall from "./components /exceptionalHandling/api-call"
-import InlineStyles from "./components /styling/inline-styles"
-import ExternalStyles from "./components /styling/external-styling"
-import ModuleStlyles from "./components /styling/module-styles"
-import BootstrapLayout from "./components /bootsrap /first-component"
-import MapMethod from "./components /bootsrap /mapMethod"
-import ParentComponent from "./components /props/parent"
-import Counter from "./components /counter /counter"
-import Mouting from "./components /lifecycle /mounting /mounting"
-import UpdatePhase from "./components /lifecycle /updating /updatingPhase"
-import Unmounting from "./components /lifecycle /unmounting /unMounting"
-import UseStateExample from "./components /hooks/useState/useStateEx1"
-import UseStateExample2 from "./components /hooks/useState/useStateEx2"
-import UseStateExample3 from "./components /hooks/useState/useStateEx3"
-import Uncontrolled from "./components /forms /uncontrolled"
-import Controlled from "./components /forms /controlled/controlled"
-import Circle from "./components /forms /circle"
+import NavigationStack from "./navigationStack /navigation"
 
 function App (){
   const greenColor="green"
   return(
 <div>
-{/* <Mouting color={greenColor} /> */}
-{/* <Counter/> */}
-{/* <UpdatePhase favColor="green" /> */}
-{/* <Unmounting/> */}
-{/* <UseStateExample/> */}
-{/* <UseStateExample2/> */}
-{/* <UseStateExample3/> */}
-{/* <Uncontrolled/> */}
-{/* <Controlled/> */}
-<Circle/>
+  <NavigationStack/>
+
 
 
 
@@ -303,6 +273,13 @@ export default App
 // if(true){
 //   useState 
 // }
+
+
+// Routing : Navigation between pages in the application we can call it as Routing 
+
+// React doesn't provide the routing coz its only focus on the ui 
+
+// to provide routing in react application we use React-router-dom 
 
 
 
