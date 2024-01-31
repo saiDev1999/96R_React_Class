@@ -45,7 +45,7 @@ export default UseEffectEx1
 
 
 
-const ProductListing =({data})=>{
+export const ProductListing =({data})=>{
     return(
         <>
         <div>
@@ -54,6 +54,8 @@ const ProductListing =({data})=>{
         </>
     )
 }
+
+
 
 
 

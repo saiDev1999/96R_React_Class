@@ -4,6 +4,7 @@ import SettingScreen from "../screens/postLoginScreens/settingScreen"
 import AboutScreen from "../screens/postLoginScreens/aboutScreen"
 import ProductsScreen from "../screens/postLoginScreens/productsScreen"
 import InvalidScreen from "../screens/invalidScreen"
+import ProductDetails from "../screens/postLoginScreens/productDetails"
 
 const NavigationStack =()=>{
 
@@ -16,7 +17,10 @@ const NavigationStack =()=>{
     <Route path="/settings" Component={SettingScreen}    />
     <Route path="/about" Component={AboutScreen}    />
     <Route path="/investor-relations" Component={ProductsScreen}    />
+
     <Route path="*" Component={InvalidScreen}    />
+
+    <Route path="/productlistview/:id" Component={ProductDetails}/>
 
         </Routes>
 
