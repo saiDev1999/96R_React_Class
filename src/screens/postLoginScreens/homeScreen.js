@@ -1,14 +1,16 @@
-import { useEffect,useState } from "react"
+import { useContext, useEffect,useState } from "react"
 import UseEffectEx1, { ProductListing } from "../../components /hooks/useEffect/useEffect1"
 import UseEffectEx2 from "../../components /hooks/useEffect/useEffect2"
 import UseEffect3 from "../../components /hooks/useEffect/useEffect3"
 import Navbar from "../../components /navBar /navBar"
 import axios from "axios"
 import { Link } from "react-router-dom"
+import { DataShare } from "../../navigationStack /navigation"
 
 const HomeScreen = ()=>{
     const[productsListing,setProductListing]=useState([])
     const [totalPrice,setTotalPrice]=useState(null)
+    const{darkTheme,changeTheme}=useContext(DataShare)
    useEffect(()=>{
     fetchData()
     console.log("Component mount")
@@ -19,8 +21,11 @@ const HomeScreen = ()=>{
     axios.get("https://fakestoreapi.com/products")
     .then(response=>{
         if(response.status===200){
+             const newResponse=response.data.map(eachObj=>{
+                return {...eachObj,count:1,total:eachObj.price}
+             })
             //Successfully data came
-            setProductListing(response.data)
+            setProductListing(newResponse)
             const result=sumOfPrice(response.data)
             setTotalPrice(result)
 
@@ -35,10 +40,28 @@ const HomeScreen = ()=>{
     return result
   }
 
+  const handleIncrement=(data)=>{
+
+    console.log(data)
+    console.log(productsListing)
+
+  }
+
+  const controlTheme=()=>{
+    changeTheme()
+
+  }
+
      
     return(
         <>
         <Navbar/>
+
+        <div style={{height:100,width:100,backgroundColor:darkTheme?"black":"red"}}  >
+
+             
+        </div>
+        <button onClick={controlTheme} >ChangeTheme</button>
 
         
         <h2>I am from home screen</h2>
@@ -46,7 +69,7 @@ const HomeScreen = ()=>{
 
 
         {
-            productsListing.length>0 ? productsListing.map(product=><ProductListingComponent key={product.id} data={product}  />)
+            productsListing.length>0 ? productsListing.map(product=><ProductListingComponent key={product.id} data={product} handleIncrement={handleIncrement}  />)
             :<h1>loading...</h1>
         }
 
@@ -60,12 +83,15 @@ export default HomeScreen
 
 
 
-export const ProductListingComponent =({data})=>{
+export const ProductListingComponent =({data,handleIncrement})=>{
     return(
         <>
         <div>
             <h3>{data.title}</h3>
             <img src={data.image} alt={data.title} width={100} height={100} />
+            <button>Decrement</button>
+            <button  onClick={()=>handleIncrement(data)}  >Increment</button>
+            <h3>{data.count}</h3>
             <Link to={`/productlistview/${data.id}`} >
             <button>Click to view ProductDetails</button>
             </Link>

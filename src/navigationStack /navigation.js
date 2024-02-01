@@ -5,26 +5,56 @@ import AboutScreen from "../screens/postLoginScreens/aboutScreen"
 import ProductsScreen from "../screens/postLoginScreens/productsScreen"
 import InvalidScreen from "../screens/invalidScreen"
 import ProductDetails from "../screens/postLoginScreens/productDetails"
+import { createContext, useState } from "react"
+import LoginScreen from "../screens/preLoginScreens/login-screen"
+import PostLogin from "./postLoginRoute"
+import PreLogin from "./preLoginRoute"
+
+
+ 
+export const DataShare = createContext()
 
 const NavigationStack =()=>{
 
+
+    const[name,setName]=useState("10kCoders")
+    const [darkTheme,setDarkTheme]=useState(false)
+    const [login,setLogin]=useState(false)
+
+     const changeTheme=()=>{
+        debugger
+        setDarkTheme(!darkTheme)
+     }
+
+     const loginTrue=()=>{
+        setLogin(true)
+     }
+
+
     return(
+        <DataShare.Provider value={{name,darkTheme,changeTheme,loginTrue}}  >
+
         <BrowserRouter>
-        <Routes>
-    {/* we have add the routes available in our appilication  */}
 
-    <Route path="/" Component={HomeScreen}    />
-    <Route path="/settings" Component={SettingScreen}    />
-    <Route path="/about" Component={AboutScreen}    />
-    <Route path="/investor-relations" Component={ProductsScreen}    />
+        {
 
-    <Route path="*" Component={InvalidScreen}    />
+          true 
+          ?
+          <PostLogin/>
+          :
+          <PreLogin/>
 
-    <Route path="/productlistview/:id" Component={ProductDetails}/>
 
-        </Routes>
+
+        }
+           
+
+
 
         </BrowserRouter>
+
+        </DataShare.Provider>
+
 
 
 

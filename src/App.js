@@ -293,5 +293,36 @@ export default App
 
 
 
+// useState : to manage the state in functional based components (private)
+
+
+// state management :  data management with in the application 
+
+// 1. Local state management  ---> useState 
+// 2. Global state management ----> to avoid prop drilling we will go for global management 
+
+// we can manage Global state using 2 major ways 
+
+// 2.1 Context api 
+// 2.2 Redux 
+
+// What is Prop Drilling?
+// Anyone who has worked in React would have faced this and if not then will face it definitely.
+//  Prop drilling is basically a situation when the same data is being sent at almost every level due to requirements in the final level. Here is a diagram to demonstrate it better.
+
+
+
+// steps to start context api 
+
+// 1. Create a context using createContext method from react 
+// 2. Wrap or encapsulate  the context to the components needed 
+// 3. give the value prop for the wrapper using provider 
+// 4. Consume the context via useContext hook in react 
+
+
+// useContext :
+// useContext react hook in the functional based components
+// this is used fo managing the state globally 
+
 
 

@@ -1,4 +1,6 @@
+import { useContext } from "react"
 import Navbar from "../../components /navBar /navBar"
+import { DataShare } from "../../navigationStack /navigation"
 
 
 
@@ -7,9 +9,14 @@ import Navbar from "../../components /navBar /navBar"
 
 
 const SettingScreen =()=>{
+    const{darkTheme}=useContext(DataShare)
     return(
         <>
         <Navbar/>
+        <div style={{height:100,width:100,backgroundColor:darkTheme?"black":"red"}}  >
+
+             
+</div>
         <h1>I am from setting screen </h1>
         </>
     )
