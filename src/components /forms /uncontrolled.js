@@ -1,4 +1,5 @@
-import { useRef, useState } from "react"
+import { useContext, useRef, useState } from "react"
+import { DataShare } from "../../navigationStack /navigation"
 
 
 
@@ -8,6 +9,8 @@ const Uncontrolled =()=>{
     const emailRef=useRef()
     const passwordRef=useRef()
     const[error,setError]=useState("")
+
+    const{loginTrue}=useContext(DataShare)
 
 
 
@@ -52,7 +55,10 @@ const Uncontrolled =()=>{
     setError(res.message)
 
   }else{
+    console.log(res)
     alert("successfull login")
+    loginTrue()
+    localStorage.setItem("userLoginInfo",res.data)
     setError("")
   }
 
