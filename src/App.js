@@ -326,3 +326,39 @@ export default App
 
 
 
+// useState : which is manage the state for normal tasks , local state mangement 
+
+// useReducer : it is hook in functional components  which helps in managing the state for complex tasks 
+// local state mangement
+
+
+
+
+
+// useReducer()
+
+// it will accept 2 args 
+
+// 1. Reducer function ---> (this is the pure function which manipulates the state by the action that user performed)
+// 2. Initial state 
+
+// it will return array same like useState 
+
+// 1. Current state 
+// 2. Dispatch funcction (function used to update the current state )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

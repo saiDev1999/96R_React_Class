@@ -38,7 +38,7 @@ const NavigationStack =()=>{
 
         {
 
-login 
+true 
           ?
           <PostLogin/>
           :

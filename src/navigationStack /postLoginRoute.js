@@ -19,9 +19,10 @@ function PostLogin() {
     <Route path="/about" Component={AboutScreen}    />
     <Route path="/investor-relations" Component={ProductsScreen}    />
 
-    <Route path="*" Component={InvalidScreen}    />
+    
 
     <Route path="/productlistview/:id" Component={ProductDetails}/>
+    <Route path="*" Component={InvalidScreen}    />
     </Routes>
   
   )
