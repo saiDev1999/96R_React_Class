@@ -349,6 +349,16 @@ export default App
 
 
 
+// Pure components :  class based component 
+
+// React.memo ---> which is like a pure component , it is a higher order component which 
+// prevents the child to re-render until unless the props or state has been changed 
+
+// high order component --> a component passed as argument to another component which we can get the enhanced component (hoc)
+
+
+
+
 
 
 
