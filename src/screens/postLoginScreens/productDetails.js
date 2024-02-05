@@ -1,27 +1,31 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import { useAxios } from "../../components /hooks/customHooks/useAxios"
 
 const ProductDetails=()=>{
     const routeInformation =useParams()
-  const [productDetails,setProductDetails]=useState({})
+//   const [productDetails,setProductDetails]=useState({})
 
-    useEffect(()=>{
-        fetchEachProduct(routeInformation.id)
-    },[routeInformation.id])
 
-    const fetchEachProduct =(id)=>{
-        axios.get(`https://fakestoreapi.com/products/${id}`)
-        .then(response=>{
-            if(response.status===200){
-                setProductDetails(response.data)
+      const[productDetails]=useAxios(`https://fakestoreapi.com/products/${routeInformation.id}`)
 
-            }else{
-                alert("req failed")
-            }      
-        })
+    // useEffect(()=>{
+    //     fetchEachProduct(routeInformation.id)
+    // },[routeInformation.id])
 
-    }
+    // const fetchEachProduct =(id)=>{
+    //     axios.get(`https://fakestoreapi.com/products/${id}`)
+    //     .then(response=>{
+    //         if(response.status===200){
+    //             setProductDetails(response.data)
+
+    //         }else{
+    //             alert("req failed")
+    //         }      
+    //     })
+
+    // }
      
 
 

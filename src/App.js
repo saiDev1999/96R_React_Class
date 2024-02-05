@@ -386,6 +386,20 @@ export default App
   // 2nd scenerios 
 
 
+
+
+// custom hooks : these are the user defined hooks 
+
+// which extracts the common functuality between the components like simple counter , axios
+
+// custom hooks designed by using predefined hooks like useState , useEffect ...
+// 
+// custom hooks will suggested to start with use keyword as like other hooks
+
+
+
+
+
   
 
 

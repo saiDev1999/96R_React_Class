@@ -6,39 +6,16 @@ import Navbar from "../../components /navBar /navBar"
 import axios from "axios"
 import { Link } from "react-router-dom"
 import { DataShare } from "../../navigationStack /navigation"
+import { useAxios } from "../../components /hooks/customHooks/useAxios"
+import { useCounter } from "../../components /hooks/customHooks/useCounter"
 
 const HomeScreen = ()=>{
-    const[productsListing,setProductListing]=useState([])
+
     const [totalPrice,setTotalPrice]=useState(null)
     const{darkTheme,changeTheme}=useContext(DataShare)
-   useEffect(()=>{
-    fetchData()
-    console.log("Component mount")
-   },[])
-   // This function is for fetching the data from server to client 
-   const fetchData =()=>{
-    //axios
-    axios.get("https://fakestoreapi.com/products")
-    .then(response=>{
-        if(response.status===200){
-             const newResponse=response.data.map(eachObj=>{
-                return {...eachObj,count:1,total:eachObj.price}
-             })
-            //Successfully data came
-            setProductListing(newResponse)
-            const result=sumOfPrice(response.data)
-            setTotalPrice(result)
+      const[productsListing]=useAxios("https://fakestoreapi.com/products")
+     const[count,increment,decrement]=useCounter(100)
 
-        }
-    })
-
-   }
-
-    // This function is for calculation of sum of property values
-   const sumOfPrice=(arryOfObjects)=>{
-    const result=arryOfObjects.reduce((initial,eachObject)=>initial+eachObject.price,0)
-    return result
-  }
 
   const handleIncrement=(data)=>{
 
@@ -62,6 +39,9 @@ const HomeScreen = ()=>{
              
         </div>
         <button onClick={controlTheme} >ChangeTheme</button>
+        <h1>{count}</h1>
+        <button onClick={increment} >Increment</button>
+        <button onClick={decrement} >Decrement</button>
 
         
         <h2>I am from home screen</h2>
@@ -69,7 +49,7 @@ const HomeScreen = ()=>{
 
 
         {
-            productsListing.length>0 ? productsListing.map(product=><ProductListingComponent key={product.id} data={product} handleIncrement={handleIncrement}  />)
+            productsListing?.length>0 ? productsListing.map(product=><ProductListingComponent key={product.id} data={product} handleIncrement={handleIncrement}  />)
             :<h1>loading...</h1>
         }
 
