@@ -363,6 +363,43 @@ export default App
 
 
 
+// Use memo and Use callback 
+
+
+
+// Use memo : it is memorization technique in react , which memorize the expensive calculation result or value ,
+// which ultimately increase the performace 
+
+
+// each milk 50 rupees 
+// 2 milk  -->  100 rupees ---> day 1 
+// 2 milk  --> 100 rupees  ----> day 2 
+// 2 milk ---> 100 rupees ---> day 3 
+
+// .
+
+
+
+// Use callback : it is memorization technique in react , which memorize the functions 
+//which ultimately increase the performace 
+
+  // 2nd scenerios 
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

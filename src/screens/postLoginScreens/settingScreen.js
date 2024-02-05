@@ -2,6 +2,7 @@ import { useContext } from "react"
 import Navbar from "../../components /navBar /navBar"
 import { DataShare } from "../../navigationStack /navigation"
 import ParentMemo from "../../components /reactMemo/parent"
+import ParentUseMemo from "../../components /hooks/useMemo/ParentUseMemo"
 
 
 
@@ -14,7 +15,8 @@ const SettingScreen =()=>{
     return(
         <>
         <Navbar/>
-      <ParentMemo/>
+      {/* <ParentMemo/> */}
+      <ParentUseMemo/>
         <h1>I am from setting screen </h1>
         </>
     )
